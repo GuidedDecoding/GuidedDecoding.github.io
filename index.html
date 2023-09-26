@@ -50,21 +50,21 @@
           <!-- <h1 class="title is-2 publication-title" style="margin-top: -17px;">for Text-to-Image Generation</h1> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Yuxi Xie</a><sup>1*</sup>,</span>
+              <a href="https://yuxixie.github.io/">Yuxi Xie</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="">Kenji Kawaguchi</a><sup>1</sup>,</span>
+              <a href="https://ml.comp.nus.edu.sg/kawaguchi">Kenji Kawaguchi</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Yiran Zhao</a><sup>1</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=D_HwSlEAAAAJ&hl=en">Yiran Zhao</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">James Xu Zhao</a><sup>1</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=Ybcwc2IAAAAJ&hl=en">James Xu Zhao</a><sup>1</sup>,</span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Min-Yen Kan</a><sup>1#</sup>,</span>
+              <a href="https://www.comp.nus.edu.sg/~kanmy/">Min-Yen Kan</a><sup>1#</sup>,</span>
             <span class="author-block">
-              <a href="">Junxian He</a><sup>2#</sup>,</span>
+              <a href="https://jxhe.github.io/">Junxian He</a><sup>2#</sup>,</span>
             <span class="author-block">
-              <a href="">Michael Qizhe Xie</a><sup>1#</sup>,</span>
+              <a href="https://www.michaelxie.com/">Michael Qizhe Xie</a><sup>1#</sup>,</span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -129,7 +129,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            place-holder
+            We endow Large Language Models (LLMs) with fine-grained self-evaluation to refine multi-step reasoning inference. 
+            We propose an effective prompting approach that integrates self-evaluation guidance through stochastic beam search. 
+            Our approach explores the reasoning search space using a well-calibrated automatic criterion. 
+            This enables an efficient search to produce higher-quality final predictions. 
+            With the self-evaluation guided stochastic beam search, we also balance the quality-diversity trade-off in the generation of reasoning chains. 
+            This allows our approach to adapt well with majority voting and surpass the corresponding Codex-backboned baselines by 6.34%, 9.56%, and 5.46% on the GSM8K, AQuA, and StrategyQA benchmarks, respectively, in few-shot accuracy. 
+            Analysis of our decompositional reasoning finds it pinpoints logic failures and leads to higher consistency and robustness.
           </p>
 
         </div>
@@ -150,16 +156,16 @@
 
         <div class="content has-text-justified">
           <p>
-            Place-holder (Motivation & Framework)
+            COMING SOON
 
-            <ol>
+            <!-- <ol>
               <li>
                 <b>Place-holder</b> Place-holder
               </li>
               <li>
                 <b>Place-holder</b>, <em>e.g.</em> Place-holder
               </li>
-            </ol>
+            </ol> -->
 
 
           </p>
@@ -174,7 +180,9 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Examples</h2>
 
-        <h3 class="title is-4">Arithmetic Reasoning</h3>
+        <p>COMING SOON</p>
+
+        <!-- <h3 class="title is-4">Arithmetic Reasoning</h3>
         <div class="content has-text-justified">
           <p>
             Place-holder
@@ -189,7 +197,7 @@
           </p>
           <img src="./static/images/case-strategyqa-csqa.jpg" alt="Teaser" width="100%">
         </div>
-        <br/>
+        <br/> -->
 
 
 
@@ -203,7 +211,11 @@
 
         <div class="content has-text-justified">
           <p>
-            You may refer to related works such as <a href="">CoT</a>, <a href="">PAL</a>, <a href="">Tree-of-Thought</a>, and <a href="">LLM-Reasoners</a> which serve as foundations and variations of our Guided-Decoding framework and code repository.
+            You may refer to related works such as <a href="https://arxiv.org/abs/2201.11903">CoT</a>, 
+            <a href="https://arxiv.org/abs/2211.10435">PAL</a>, 
+            <a href="https://arxiv.org/abs/2305.08291">Tree-of-Thought</a>, 
+            and <a href="https://www.llm-reasoners.net/">LLM-Reasoners</a> 
+            which serve as foundations and variations of our Guided-Decoding framework and code repository.
           </p>
         </div>
       </div>
@@ -216,7 +228,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>place-holder
+    <pre><code>@misc{xie2023decomposition,
+      title={Decomposition Enhances Reasoning via Self-Evaluation Guided Decoding}, 
+      author={Yuxi Xie and Kenji Kawaguchi and Yiran Zhao and Xu Zhao and Min-Yen Kan and Junxian He and Qizhe Xie},
+      year={2023},
+      eprint={2305.00633},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 </code></pre>
   </div>
 </section>
