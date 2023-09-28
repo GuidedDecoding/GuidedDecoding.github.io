@@ -20,6 +20,10 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js">
+  </script>
+
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
   <link rel="icon" href="./static/images/layout.png">
@@ -117,14 +121,15 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <iframe class="columns is-centered has-text-centered" src="./static/images/running-exp.pdf" type="application/pdf" alt="Teaser" width="100%" height="600px" style="margin:0 auto"></iframe>
+      <img class="columns is-centered has-text-centered" src="./static/images/running-exp.jpg" alt="Teaser" width="100%" style="margin:0 auto">
+      <!-- <iframe class="columns is-centered has-text-centered" src="./static/images/running-exp.pdf" type="application/pdf" alt="Teaser" width="100%" height="600px" style="margin:0 auto"></iframe> -->
       <h2 class="subtitle">
         <p>
-          We propose <span style="color: rgb(80, 121, 209);"><b>Self-Evaluation Guided Beam Search</b></span>, a framework of stepwise LLM reasoning.
+          We propose <span style="color: rgb(50, 154, 50)"><b>Self-Evaluation Guided Beam Search</b></span>, a framework of stepwise LLM reasoning.
         </p>
         <p>
           Self-Evaluation can calibrate the decoding direction step by step in reasoning. 
-          We illustrate our method in the form of stepwise stochastic beam search with the beam size equal to 1. 
+          We illustrate our method with the beam size equal to 1. 
           The scale of the self-evaluation score is visualized in the colormap.
         </p>
 
@@ -160,63 +165,69 @@
   </div>
 </section>
 
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <h2 class="title is-3">Self-Evaluation Guided Stochastic Beam Search</h2>
+      <div class="content has-text-justified">
+        <p>
+          Prior works on LLM reasoning illustrate significant improvement in model performance by <span style="color: rgb(50, 154, 50)">breaking down a problem into intermediate stages</span> &ndash; a reasoning chain (e.g., <a href="https://arxiv.org/abs/2201.11903"><em>chain-of-thought</em></a> (CoT), <a href="https://arxiv.org/abs/2211.10435"><em>program-aided language models</em></a> (PAL)). 
+          However, as the complexity and length of reasoning chains increase, LLMs struggle with errors and imperfections that accumulate across multiple intermediate steps. Furthermore, the growing number of steps leads to an <span style="color: rgb(50, 154, 50)">exponential growth in the search space for reasoning</span>, making it exceedingly difficult to obtain accurate final outcomes.
+        </p>
+        <p>
+          In our work, we introduce a <span style="color: rgb(50, 154, 50)">stepwise self-evaluation</span> mechanism tailored to facilitate an efficient search in the reasoning space.
+          We adopt LLM <em>self-evaluation</em> as an automatic criterion to guide the reasoning process, drawing inspiration from previous works on utilizing LLMs for self-evalution (<a href="https://arxiv.org/abs/2207.05221">Kadavath et al. 2023</a>).
+          Specifically, we formulate the reasoning chain generation as a decoding process consisting of multiple intermediate steps. 
+          We employ <span style="color: rgb(50, 154, 50)">stochastic beam search decoding</span> to balance the exploitation and exploration of the reasoning search space with temperature-controlled randomness.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop is-centered has-text-centered">
+      <h2 class="title is-3">Generated Examples</h2>
+
+    </div>
+
+    <div class="content has-text-justified">
+      <p>
+        We compare the predictions of baseline and our methods on particular instances.
+        Scores from low to high are visualized from <span style="background-color: rgb(255, 188, 103)">orange</span>, <span style="background-color: rgb(254, 252, 186)">yellow</span>, to <span style="background-color: rgb(145, 211, 103)">green</span>. Here \(\mathcal{C}\), \(\mathcal{P}\), and \(\mathcal{E}\) represent the evaluation confidence, the generation confidence (probability), and their combination as the final self-evaluation score, respectively.
+      </p>
+      <p>
+        In general, the evaluation confidence \(\mathcal{C}\) is more effective at identifying logical errors, taking into account accumulated mistakes from prior steps, while the generation probability \(\mathcal{P}\) focuses more on text perplexity as the confidence of the LLM generator.
+      </p>
+
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Arithmetic Reasoning</h2>
+        <img src="./static/images/gsm8k-pal.jpg" alt="Teaser" width="100%">
+        <img src="./static/images/gsm8k-cot.jpg" alt="Teaser" width="100%">
+
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4">Commonsense Reasoning</h2>
+        <img src="./static/images/sqa-cot.jpg" alt="Teaser" width="100%">
+
+      </div>
+    </div>
+  
+  </div>
+</section>
+
 <section class="section">
   <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Guided Decoding</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            COMING SOON
-
-            <!-- <ol>
-              <li>
-                <b>Place-holder</b> Place-holder
-              </li>
-              <li>
-                <b>Place-holder</b>, <em>e.g.</em> Place-holder
-              </li>
-            </ol> -->
-
-
-          </p>
-          <img class="columns is-centered has-text-centered" src="./static/images/intro.jpg" alt="Teaser" width="60%" style="margin:0 auto">
-        </div>
-        <br/>
-
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Examples</h2>
-
-        <p>COMING SOON</p>
-
-        <!-- <h3 class="title is-4">Arithmetic Reasoning</h3>
-        <div class="content has-text-justified">
-          <p>
-            Place-holder
-          </p>
-          <img src="./static/images/case-gsm8k-palcot-aqua.jpg" alt="Teaser" width="100%">
-        </div>
-
-        <h3 class="title is-4">Commonsense Reasoning</h3>
-        <div class="content has-text-justified">
-          <p>
-            Place-holder
-          </p>
-          <img src="./static/images/case-strategyqa-csqa.jpg" alt="Teaser" width="100%">
-        </div>
-        <br/> -->
-
-
-
-      </div>
-    </div>
-
 
     <div class="columns is-centered">
       <div class="column is-full-width">
