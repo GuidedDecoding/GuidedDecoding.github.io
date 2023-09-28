@@ -4,7 +4,14 @@ This is the repository that contains the source code for the [Guided-Decoding pr
 
 If you use `Guided-Decoding` in your project, please kindly cite:
 ```
-
+@misc{xie2023decomposition,
+      title={Decomposition Enhances Reasoning via Self-Evaluation Guided Decoding}, 
+      author={Yuxi Xie and Kenji Kawaguchi and Yiran Zhao and Xu Zhao and Min-Yen Kan and Junxian He and Qizhe Xie},
+      year={2023},
+      eprint={2305.00633},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
 ```
 
 # Website License
