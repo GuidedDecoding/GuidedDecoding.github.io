@@ -114,17 +114,6 @@
   </div>
 </section>
 
-<object data="./static/images/running-exp.pdf" type="application/pdf" alt="Teaser"></object>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <!-- Intro Figure. -->
-    
-  </div>
-  <!--/ Intro Figure. -->
-
-</section>
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -136,7 +125,7 @@
             We introduce a stepwise self-evaluation mechanism tailored to enhance the reasoning capabilities of Large Language Models (LLMs). 
             We propose an effective prompting framework integrating self-evaluation guidance via stochastic beam search. 
             The self-evaluation guidance serves as a better-calibrated automatic criterion, facilitating an efficient search in the reasoning space and resulting in superior prediction quality. 
-            With controllable randomness, stochastic beam search balances exploitation and exploration of the reasoning search space. 
+            With temperature-controlled randomness, stochastic beam search balances exploitation and exploration of the reasoning search space. 
             This allows our approach to excel in producing high-quality single-chain generation and adapt well to the multiple-chain scenario with high diversity. 
             Our approach surpasses the corresponding Codex-backboned baselines in few-shot accuracy by 6.34%, 9.56%, and 5.46% on the GSM8K, AQuA, and StrategyQA benchmarks, respectively. 
             Further analysis in multi-step reasoning finds our self-evaluation guidance pinpoints logic failures and leads to higher consistency and robustness.
@@ -149,6 +138,24 @@
   </div>
 </section>
 
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <object data="./static/images/running-exp.pdf" type="application/pdf" alt="Teaser"></object>
+      <h2 class="subtitle">
+        <p>
+          Self-Evaluation can calibrate the decoding direction step by step in reasoning. 
+          We illustrate our method in the form of stepwise stochastic beam search with the beam size equal to 1. 
+          The scale of the self-evaluation score is visualized in the colormap.
+        </p>
+
+      </h2>
+
+    </div>
+    
+  </div>
+
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
