@@ -129,13 +129,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We endow Large Language Models (LLMs) with fine-grained self-evaluation to refine multi-step reasoning inference. 
-            We propose an effective prompting approach that integrates self-evaluation guidance through stochastic beam search. 
-            Our approach explores the reasoning search space using a well-calibrated automatic criterion. 
-            This enables an efficient search to produce higher-quality final predictions. 
-            With the self-evaluation guided stochastic beam search, we also balance the quality-diversity trade-off in the generation of reasoning chains. 
-            This allows our approach to adapt well with majority voting and surpass the corresponding Codex-backboned baselines by 6.34%, 9.56%, and 5.46% on the GSM8K, AQuA, and StrategyQA benchmarks, respectively, in few-shot accuracy. 
-            Analysis of our decompositional reasoning finds it pinpoints logic failures and leads to higher consistency and robustness.
+            We introduce a stepwise self-evaluation mechanism tailored to enhance the reasoning capabilities of Large Language Models (LLMs). 
+            We propose an effective prompting framework integrating self-evaluation guidance via stochastic beam search. 
+            The self-evaluation guidance serves as a better-calibrated automatic criterion, facilitating an efficient search in the reasoning space and resulting in superior prediction quality. 
+            With controllable randomness, stochastic beam search balances exploitation and exploration of the reasoning search space. 
+            This allows our approach to excel in producing high-quality single-chain generation and adapt well to the multiple-chain scenario with high diversity. 
+            Our approach surpasses the corresponding Codex-backboned baselines in few-shot accuracy by $6.34\%$, $9.56\%$, and $5.46\%$ on the GSM8K, AQuA, and StrategyQA benchmarks, respectively. 
+            Further analysis in multi-step reasoning finds our self-evaluation guidance pinpoints logic failures and leads to higher consistency and robustness.
           </p>
 
         </div>
